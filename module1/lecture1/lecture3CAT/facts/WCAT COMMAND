@@ -1,0 +1,3 @@
+//-s remove extra spaces form output
+//-n add line number every empty line
+//-b add line number non empty line

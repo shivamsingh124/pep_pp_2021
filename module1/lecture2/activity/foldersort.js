@@ -1,6 +1,5 @@
 let fs = require ("fs");
-//const { mkdir } = require("node:fs");
-//const { readdirSync } = require("node:fs");
+
  let extensionsMapping=require ("./util.js");
 //console.log(extensionsMapping);
 let testfolderpath = "./Downloads";
