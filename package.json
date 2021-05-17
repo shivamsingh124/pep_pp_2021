@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/shivamsingh124/pep_pp_2021#readme",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.9"
+    "cheerio": "^1.0.0-rc.9",
+    "json2xls": "^0.1.2",
+    "request": "^2.88.2"
   }
 }
