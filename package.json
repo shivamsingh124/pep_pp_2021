@@ -20,6 +20,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.9",
     "json2xls": "^0.1.2",
+    "puppeteer": "^9.1.1",
     "request": "^2.88.2"
   }
 }

@@ -100,26 +100,71 @@
 
 
 
+// import java.io.*;
+// import java.util.*;
 
-import java.io.*;
-import java.util.*;
+// public class l001{
 
-public class l001{
-
-public static void main(String[] args) throws Exception {
-    // write your code here
-    int j=0;
-    int n=3;
-    for(int i=0;i<n&&j<n+1;j++){
+// public static void main(String[] args) throws Exception {
+//     // write your code here
+//     int j=0;
+//     int n=3;
+//     for(int i=0;i<n&&j<n+1;j++){
          
-         if(j==n){
-         i++;
-         j=i;    
-         }
+//          if(j==n){
+//          i++;
+//          j=i;    
+//          }
         
-         System.out.print(i+" "+j+"\n");
+//          System.out.print(i+" "+j+"\n");
          
-    }
- }
+//     }
+//  }
 
+// }
+
+
+
+
+import java.util.Scanner;
+
+public class l001
+{
+     public static double perimeter(double s) {
+        double p = 4 * s;
+        return p;
+    }
+    
+    public static double perimeter(double l, double b) {
+        double p = 2 * (l + b);
+        return p;
+    }
+    
+    public static double perimeter(int c, double pi, double r) {
+        double p = c * pi * r;
+        return p;
+    }
+    
+    public static void main(String args[]) {
+        Scanner in = new Scanner(System.in);
+        
+        
+        System.out.print("Enter side of square: ");
+        double side = in.nextDouble();
+        double dc=perimeter(side);
+        System.out.println("Perimeter of square = " + dc);
+        
+        System.out.print("Enter length of rectangle: ");
+        double l = in.nextDouble();
+        System.out.print("Enter breadth of rectangle: ");
+        double b = in.nextDouble();
+        double dd=perimeter(l, b);
+        System.out.println("Perimeter of rectangle = " +dd );
+        
+        System.out.print("Enter radius of circle: ");
+        double r = in.nextDouble();
+        double d =perimeter(2, 3.14159, r);
+        System.out.println("Perimeter of circle = " + d);
+    } 
+      
 }
