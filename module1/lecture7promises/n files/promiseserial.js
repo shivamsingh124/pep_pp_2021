@@ -6,5 +6,6 @@ let files=["../f1.txt","../f2.txt","../f3.txt"];
        console.log(data);
        serial(i+1)
    })
+   fnkadata.catch(function(err){})
 }
 serial (0)
