@@ -1,5 +1,6 @@
 const puppeteer=require("puppeteer");
-const id = "notax89095@frnla.com";
+let fs = require ("fs")
+const id = "sadena1729@rphinfo.com";
 const pw="123456789";
 let tab;
 let idx=0;
@@ -59,10 +60,20 @@ let allpromisecombined=Promise.all(allpendingpromise);
 return allpromisecombined;
 })
 .then(function(allpromisecombined){
-  return solvequestion(allpromisecombined[0])
+    let onequestionpromise= solvequestion(allpromisecombined[0])
+for ( let i=1 ;i < allpromisecombined.length;i++){
+    onequestionpromise= onequestionpromise.then(function(data){
+    // console.log(data);
+    let nextquestionpromise=solvequestion(allpromisecombined[i]);
+    return nextquestionpromise;
+  })
+  
+}
+ return onequestionpromise;                                       ///////////////////////////////doubt doubt doubt doubt doubt 
 })
+
 .then(function(){
-    console.log("First question solved");
+    console.log("All question solved");
 
 })
  .catch(function(err){
@@ -75,7 +86,7 @@ return allpromisecombined;
  function getcode(){
      return new Promise(function(scb,fcb){
         
-            let waitpromise= tab.waitForSelector('div[data-attr2="Editorial"]',{visible:true})
+            let waitpromise= tab.waitForSelector(".hackdown-content h3",{visible:true})
          waitpromise.then(function(){
              return tab.$$(".hackdown-content h3");
          })
@@ -113,6 +124,7 @@ return allpromisecombined;
          })
          .then(function(data){
             gcode=data;
+            console.log(gcode)
             scb();
          })
          .catch(function(error){
@@ -131,7 +143,7 @@ function pastecode(){
            
        })
        .then(function(){
-        return tab.type('#input-1',gcode)
+        return tab.type('.custominput',gcode)
        })
        .then(function(){
            return tab.keyboard.down("Control")
@@ -143,7 +155,7 @@ function pastecode(){
         return tab.keyboard.press("X"); 
        })
        .then(function(){
-        return tab.click(".hr-monaco-editor-parent"); 
+        return tab.click(".monaco-scrollable-element.editor-scrollable.vs"); 
        })
        .then(function(){
         return tab.keyboard.press("A"); 
@@ -207,6 +219,7 @@ function solvequestion(oneques){
            return  handlelockbutton();
         })
         .then(function(){
+            console.log(gcode)
             return getcode();
         })
         .then(function(){
@@ -214,7 +227,7 @@ function solvequestion(oneques){
         return tab.click('div[data-attr2="Problem"]');
         })
         .then(function(){
-            pastecode();
+           return  pastecode();
         })
         .then(function(){
             return tab.waitForTimeout(200);
