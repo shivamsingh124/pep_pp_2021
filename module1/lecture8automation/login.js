@@ -86,7 +86,7 @@ for ( let i=1 ;i < allpromisecombined.length;i++){
  function getcode(){
      return new Promise(function(scb,fcb){
         
-            let waitpromise= tab.waitForSelector(".hackdown-content h3",{visible:true})
+            let waitpromise= tab.waitForSelector('.editorial-code-box',{visible:true})
          waitpromise.then(function(){
              return tab.$$(".hackdown-content h3");
          })
@@ -143,7 +143,7 @@ function pastecode(){
            
        })
        .then(function(){
-        return tab.type('.custominput',gcode)
+        return tab.type('#input-1',gcode)
        })
        .then(function(){
            return tab.keyboard.down("Control")
@@ -155,7 +155,7 @@ function pastecode(){
         return tab.keyboard.press("X"); 
        })
        .then(function(){
-        return tab.click(".monaco-scrollable-element.editor-scrollable.vs"); 
+        return tab.click(".hr-monaco-editor-parent"); 
        })
        .then(function(){
         return tab.keyboard.press("A"); 
@@ -227,7 +227,7 @@ function solvequestion(oneques){
         return tab.click('div[data-attr2="Problem"]');
         })
         .then(function(){
-           return  pastecode();
+           return pastecode();
         })
         .then(function(){
             return tab.waitForTimeout(200);
