@@ -232,7 +232,7 @@ browserOpenPromise
 
 function waitandclick(selector){
     return new Promise (function(scb,fcb){
-        let waitpromise = tab.waitForSelector(selector,{visible:true,timeout:5000});
+        let waitpromise = tab.waitForSelector(selector,{visible:true,timeout:3000});
         waitpromise.then(function(){
            return tab.click(selector);     
         })
@@ -256,7 +256,7 @@ function waitandclick(selector){
             return tab.type(".r-30o5oe.r-1niwhzg.r-17gur6a.r-1yadl64.r-deolkf.r-homxoj.r-poiln3.r-7cikom.r-1ny4l3l.r-xyw6el.r-641cr4.r-1dz5y72.r-fdjqy7.r-13qz1uu",uid);     //search
         })
             .then (function(){
-                return tab.waitForTimeout(2000)
+                return tab.waitForTimeout(3000)
             })
             
             .then(function(){
