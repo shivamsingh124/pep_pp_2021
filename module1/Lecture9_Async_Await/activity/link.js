@@ -122,6 +122,6 @@ let challenges = require("./challenges");
     await newtab.keyboard.press("Enter");
     await newtab.click('.save-challenge.btn.btn-green')
     await newtab.close();
-    await newtab.waitForTimeout(3000)
+    await newtab.waitForTimeout(3000);
 
     }

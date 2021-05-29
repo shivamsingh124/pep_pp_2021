@@ -1,5 +1,5 @@
 const puppeteer=require("puppeteer");
-let id = "";
+let id = "gg";
 const pw="1234567";
 let tab;
 let browserOpenPromise=puppeteer.launch({
@@ -15,20 +15,21 @@ browserOpenPromise
 
 .then(function(pages){
     tab=pages[0];
-    return tab.goto("https://temp-mail.org/en/");
+    return tab.goto("https://news.google.com/topstories?hl=en-IN&gl=IN&ceid=IN:en");
 
 })
-.then ( function(){
-    return tab.wait(".input-warp",{visible:true});
-})
+// .then ( function(){
+//     return tab.wait(".emailbox-input.opentip",{visible:true, timeout:5000});
+// })
 .then(function(){
-    return tab.$('.input-warp');   // get all a tag which contain this selector in form of array
+
+    return tab.$('.wmzpFf.yETrXb.Ir3o3e');   // get all a tag which contain this selector in form of array
 })
 .then(function(arr){
-    // console.log(elem);
-    id= tab.evaluate( function(eleme){ eleme.value; } ,arr);
+    // console.log(arr)
+    id= tab.evaluate( function(eleme){ return eleme.textContent; } ,arr);
     return id;
 })
-.then(function(){
-    console.log(id);
+.then(function(data){
+    console.log(data);
 })

@@ -288,3 +288,13 @@ function waitandclick(selector){
 // word file 
 // type in inbox
 //mail id evaluate 
+
+
+
+
+
+
+
+
+
+

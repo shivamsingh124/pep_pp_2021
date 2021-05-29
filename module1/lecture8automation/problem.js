@@ -76,7 +76,7 @@ function solvequestion(oneques){
              return waitandclick("div[data-attr2='Editorial']"); // editoriqal 
         })
         .then(function(){
-           return  tab.waitForSelector('div[data-attr2="Editorial"]',{visible:true})
+           return  tab.waitForSelector('.hackdown-content h3',{visible:true})
 
         })
         .then(function(){
@@ -117,6 +117,9 @@ function solvequestion(oneques){
         })
         .then(function(data){
             console.log(data)
+        })
+        .then(function(){
+           return  tab.click(".tab-item-color");
         })
     })
 }
