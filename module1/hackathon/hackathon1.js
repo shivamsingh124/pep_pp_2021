@@ -40,186 +40,186 @@ browserOpenPromise
      return tab.click('.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-1qd0xha.r-a023e6.r-b88u0q.r-1777fci.r-rjixqe.r-dnmrzs.r-bcqeeo.r-q4m81j.r-qvutc0',{visible:true})  // module             //submit
   })
   .then( function(){
-     return search(usernames[0].uidd);  
+     return search(usernames[0].user_id);  
   })
   .then(function(){
-    console.log("message delivered to  "+ usernames[0].uidd)
+    console.log("message delivered to  "+ usernames[0].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[0].uidd)
+    console.log("message not delivered to  "+ usernames[0].user_id)
 })  
 
 
 .then( function(){
-     return search(usernames[1].uidd); 
+     return search(usernames[1].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[1].uidd)
+    console.log("message delivered to "+ usernames[1].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[1].uidd)
+    console.log("message not delivered to  "+ usernames[1].user_id)
 })
 .then(function(){
     return tab.waitForTimeout(2000)
 })
 
 .then( function(){
-     return search(usernames[2].uidd); 
+     return search(usernames[2].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[2].uidd)
+    console.log("message delivered to "+ usernames[2].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[2].uidd)
+    console.log("message not delivered to  "+ usernames[2].user_id)
 })
 
 .then( function(){
-     return search(usernames[3].uidd); 
+     return search(usernames[3].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[3].uidd)
+    console.log("message delivered to "+ usernames[3].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[3].uidd)
+    console.log("message not delivered to  "+ usernames[3].user_id)
 })
 
 .then( function(){
-     return search(usernames[4].uidd); 
+     return search(usernames[4].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[4].uidd)
+    console.log("message delivered to "+ usernames[4].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[4].uidd)
+    console.log("message not delivered to  "+ usernames[4].user_id)
 })
 
 .then( function(){
-     return search(usernames[5].uidd); 
+     return search(usernames[5].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[5].uidd)
+    console.log("message delivered to "+ usernames[5].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[5].uidd)
+    console.log("message not delivered to  "+ usernames[5].user_id)
 })
 
 .then( function(){
-     return search(usernames[6].uidd); 
+     return search(usernames[6].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[6].uidd)
+    console.log("message delivered to "+ usernames[6].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[6].uidd)
+    console.log("message not delivered to  "+ usernames[6].user_id)
 })
 
 .then( function(){
-    return search(usernames[7].uidd); 
+    return search(usernames[7].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[7].uidd)
+    console.log("message delivered to "+ usernames[7].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[7].uidd)
+    console.log("message not delivered to  "+ usernames[7].user_id)
 })
 .then( function(){
-    return search(usernames[8].uidd); 
+    return search(usernames[8].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[8].uidd)
+    console.log("message delivered to "+ usernames[8].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[8].uidd)
+    console.log("message not delivered to  "+ usernames[8].user_id)
 })
 .then( function(){
-    return search(usernames[9].uidd); 
+    return search(usernames[9].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[9].uidd)
+    console.log("message delivered to "+ usernames[9].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[9].uidd)
+    console.log("message not delivered to  "+ usernames[9].user_id)
 })
 .then( function(){
-    return search(usernames[10].uidd); 
+    return search(usernames[10].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[10].uidd)
+    console.log("message delivered to "+ usernames[10].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[10].uidd)
+    console.log("message not delivered to  "+ usernames[10].user_id)
 })
 .then( function(){
-    return search(usernames[11].uidd); 
+    return search(usernames[11].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[11].uidd)
+    console.log("message delivered to "+ usernames[11].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to  "+ usernames[11].uidd)
+    console.log("message not delivered to  "+ usernames[11].user_id)
 })
 .then( function(){
-    return search(usernames[12].uidd); 
+    return search(usernames[12].user_id); 
   })
   .then(function(){
-    console.log("message delivered to "+ usernames[12].uidd)
+    console.log("message delivered to "+ usernames[12].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to   "+ usernames[12].uidd)
+    console.log("message not delivered to   "+ usernames[12].user_id)
 })
 .then( function(){
-    return search(usernames[13].uidd); 
+    return search(usernames[13].user_id); 
   })
   .then(function(){
-    console.log("message delivered to  "+ usernames[13].uidd)
+    console.log("message delivered to  "+ usernames[13].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to   "+ usernames[13].uidd)
+    console.log("message not delivered to   "+ usernames[13].user_id)
 })
 .then( function(){
-    return search(usernames[14].uidd); 
+    return search(usernames[14].user_id); 
   })
   .then(function(){
-    console.log("message delivered to  "+ usernames[14].uidd)
+    console.log("message delivered to  "+ usernames[14].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to   "+ usernames[14].uidd)
+    console.log("message not delivered to   "+ usernames[14].user_id)
 })
 .then( function(){
-    return search(usernames[15].uidd); 
+    return search(usernames[15].user_id); 
   })
   .then(function(){
-    console.log("message delivered to  "+ usernames[15].uidd)
+    console.log("message delivered to  "+ usernames[15].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to   "+ usernames[15].uidd)
+    console.log("message not delivered to   "+ usernames[15].user_id)
 })
 .then( function(){
-    return search(usernames[16].uidd); 
+    return search(usernames[16].user_id); 
   })
   .then(function(){
-    console.log("message delivered to  "+ usernames[16].uidd)
+    console.log("message delivered to  "+ usernames[16].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to   "+ usernames[16].uidd)
+    console.log("message not delivered to   "+ usernames[16].user_id)
 })
 .then( function(){
-    return search(usernames[17].uidd); 
+    return search(usernames[17].user_id); 
   })
   .then(function(){
-    console.log("message delivered to  "+ usernames[17].uidd)
+    console.log("message delivered to  "+ usernames[17].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to   "+ usernames[17].uidd)
+    console.log("message not delivered to   "+ usernames[17].user_id)
 })
 .then( function(){
-    return search(usernames[18].uidd); 
+    return search(usernames[18].user_id); 
   })
   .then(function(){
-    console.log("message delivered to  "+ usernames[18].uidd)
+    console.log("message delivered to  "+ usernames[18].user_id)
 })
 .catch(function(){
-    console.log("message not delivered to   "+ usernames[18].uidd)
+    console.log("message not delivered to   "+ usernames[18].user_id)
 })
 .then(function(){
     console.log("ALL MESSAGE DONE  ")
