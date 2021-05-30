@@ -1,12 +1,15 @@
 const puppeteer=require("puppeteer");
 let usernames = require("./usernames");
-const id = "@SHIVAMS79032542";
+const id = "@ShivamSinghMah7";
+
+// SHIVAMS79032542
 const pw="trijal123";
 let tab;
 let browserOpenPromise=puppeteer.launch({
     headless:false,
     defaultViewport:null,
-    args:["--start-maximized"]
+    args:["--start-maximized"],
+    // slowMo:100
 });
 browserOpenPromise
 .then(function(browser){
@@ -45,6 +48,8 @@ browserOpenPromise
 .catch(function(){
     console.log("message not delivered to "+ usernames[0].uidd)
 })  
+
+
 .then( function(){
      return search(usernames[1].uidd); 
   })
@@ -55,22 +60,9 @@ browserOpenPromise
     console.log("message not delivered to "+ usernames[1].uidd)
 })
 .then(function(){
-    return waitandclick(".css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0 .css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0",{visible:true})      // ip kit              //login
- })
- .then(function(){
-     return waitandclick(".css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0 .css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0",{visible:true})      // ip kit           //login
-  })
-  
- .then(function(){
-     return tab.type('.css-901oao.r-1awozwy.r-1fmj7o5.r-6koalj.r-1qd0xha.r-1inkyih.r-16dba41.r-135wba7.r-bcqeeo.r-13qz1uu.r-qvutc0 input[name="session[username_or_email]"]',id);
- })
- .then(function(){
-     return tab.type('.css-901oao.r-1awozwy.r-1fmj7o5.r-6koalj.r-1qd0xha.r-1inkyih.r-16dba41.r-135wba7.r-bcqeeo.r-13qz1uu.r-qvutc0 input[name="session[password]"]',pw);
- })
- 
- .then(function(){
-     return tab.click('.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-1qd0xha.r-a023e6.r-b88u0q.r-1777fci.r-rjixqe.r-dnmrzs.r-bcqeeo.r-q4m81j.r-qvutc0',{visible:true})  // module             //submit
-  })
+    return tab.waitForTimeout(2000)
+})
+
 .then( function(){
      return search(usernames[2].uidd); 
   })
@@ -229,10 +221,13 @@ browserOpenPromise
 .catch(function(){
     console.log("message not delivered to "+ usernames[18].uidd)
 })
+.then(function(){
+    console.log("ALL MESSAGE DONE  ")
+})
 
 function waitandclick(selector){
     return new Promise (function(scb,fcb){
-        let waitpromise = tab.waitForSelector(selector,{visible:true,timeout:3000});
+        let waitpromise = tab.waitForSelector(selector,{visible:true,timeout:5000});
         waitpromise.then(function(){
            return tab.click(selector);     
         })
@@ -263,9 +258,9 @@ function waitandclick(selector){
                 return tab.click('li[role="listitem"]');                  // list click
             })
             
-            // .then (function(){
-            //     return tab.waitForTimeout(5000)
-            // })
+            .then (function(){
+                return tab.waitForTimeout(5000)
+            })
             
              .then(function(){
                 return waitandclick('div[aria-label="Message"]',{visible:true})      // ip kit               //message
@@ -275,23 +270,28 @@ function waitandclick(selector){
                 return waitandclick('.public-DraftStyleDefault-block.public-DraftStyleDefault-ltr',{visible:true})      // ip kit            //input box
              })
              .then(function(){
-                return tab.type('.public-DraftStyleDefault-block.public-DraftStyleDefault-ltr','Automation');                //messgage
+                return tab.type('.public-DraftStyleDefault-block.public-DraftStyleDefault-ltr','Hi folks,SHIVAM here from covichat team .If you are willing to donate equipment then please become a member of our TEAM   : https://60b323e65fa6c4214725377d--hungry-ramanujan-95c835.netlify.app/chat?name=cvg&room=v%20h');                //messgage
             })
             .then(function(){
                 return tab.click('path[d="M21.13 11.358L3.614 2.108c-.29-.152-.64-.102-.873.126-.23.226-.293.577-.15.868l4.362 8.92-4.362 8.92c-.143.292-.08.643.15.868.145.14.333.212.523.212.12 0 .24-.028.35-.087l17.517-9.25c.245-.13.4-.386.4-.664s-.155-.532-.4-.662zM4.948 4.51l12.804 6.762H8.255l-3.307-6.76zm3.307 8.26h9.498L4.948 19.535l3.307-6.763z"]',{visible:true})      // submit
              })
-             .then(function(){
-                // tab=pages[0];
+             .then(function () {
+               
                 return tab.goto("https://twitter.com/explore");
-            
-            })
+              })
+        
              
         .then(function(){
             
             scb();
         })
         .catch(function(){
-            fcb();
+            
+            
+                fcb();
+            
+            
+            
         })
     
    })
