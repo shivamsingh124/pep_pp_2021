@@ -43,7 +43,7 @@ browserOpenPromise
      return search(usernames[0].uidd);  
   })
   .then(function(){
-    console.log("message done to "+ usernames[0].uidd)
+    console.log("message delivered to"+ usernames[0].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[0].uidd)
@@ -54,7 +54,7 @@ browserOpenPromise
      return search(usernames[1].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[1].uidd)
+    console.log("message delivered to"+ usernames[1].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[1].uidd)
@@ -67,7 +67,7 @@ browserOpenPromise
      return search(usernames[2].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[2].uidd)
+    console.log("message delivered to"+ usernames[2].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[2].uidd)
@@ -77,7 +77,7 @@ browserOpenPromise
      return search(usernames[3].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[3].uidd)
+    console.log("message delivered to"+ usernames[3].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[3].uidd)
@@ -87,7 +87,7 @@ browserOpenPromise
      return search(usernames[4].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[4].uidd)
+    console.log("message delivered to"+ usernames[4].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[4].uidd)
@@ -97,7 +97,7 @@ browserOpenPromise
      return search(usernames[5].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[5].uidd)
+    console.log("message delivered to"+ usernames[5].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[5].uidd)
@@ -107,7 +107,7 @@ browserOpenPromise
      return search(usernames[6].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[6].uidd)
+    console.log("message delivered to"+ usernames[6].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[6].uidd)
@@ -117,7 +117,7 @@ browserOpenPromise
     return search(usernames[7].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[7].uidd)
+    console.log("message delivered to"+ usernames[7].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[7].uidd)
@@ -126,7 +126,7 @@ browserOpenPromise
     return search(usernames[8].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[8].uidd)
+    console.log("message delivered to"+ usernames[8].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[8].uidd)
@@ -135,7 +135,7 @@ browserOpenPromise
     return search(usernames[9].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[9].uidd)
+    console.log("message delivered to"+ usernames[9].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[9].uidd)
@@ -144,7 +144,7 @@ browserOpenPromise
     return search(usernames[10].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[10].uidd)
+    console.log("message delivered to"+ usernames[10].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[10].uidd)
@@ -153,7 +153,7 @@ browserOpenPromise
     return search(usernames[11].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[11].uidd)
+    console.log("message delivered to"+ usernames[11].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[11].uidd)
@@ -162,7 +162,7 @@ browserOpenPromise
     return search(usernames[12].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[12].uidd)
+    console.log("message delivered to"+ usernames[12].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[12].uidd)
@@ -171,7 +171,7 @@ browserOpenPromise
     return search(usernames[13].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[13].uidd)
+    console.log("message delivered to"+ usernames[13].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[13].uidd)
@@ -180,7 +180,7 @@ browserOpenPromise
     return search(usernames[14].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[14].uidd)
+    console.log("message delivered to"+ usernames[14].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[14].uidd)
@@ -189,7 +189,7 @@ browserOpenPromise
     return search(usernames[15].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[15].uidd)
+    console.log("message delivered to"+ usernames[15].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[15].uidd)
@@ -198,7 +198,7 @@ browserOpenPromise
     return search(usernames[16].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[16].uidd)
+    console.log("message delivered to"+ usernames[16].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[16].uidd)
@@ -207,7 +207,7 @@ browserOpenPromise
     return search(usernames[17].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[17].uidd)
+    console.log("message delivered to"+ usernames[17].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[17].uidd)
@@ -216,7 +216,7 @@ browserOpenPromise
     return search(usernames[18].uidd); 
   })
   .then(function(){
-    console.log("message done to "+ usernames[18].uidd)
+    console.log("message delivered to"+ usernames[18].uidd)
 })
 .catch(function(){
     console.log("message not delivered to "+ usernames[18].uidd)
