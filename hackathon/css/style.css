@@ -1,0 +1,91 @@
+body{
+    height: 99vh;
+    
+    background-image: url('/img/fusion-medical-animation-rnr8D3FNUNY-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+
+}
+.logo{
+    display: block;
+    margin: auto;
+    width: 61px;
+    height: 62px;;
+}
+
+h1{
+    color: white;
+    border: 2px solid black;
+    border-radius: 12px;
+    margin: auto;
+    max-width: 1022px;
+    background-color: black;
+    font-weight: bold;
+    margin-top: 12px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.container{
+    opacity: 0.9;
+    background-color:lightgrey;
+    max-width: 955px;
+    border: 2px solid black;
+    border-radius: 13px;
+    margin: auto;
+    height: 60vh;
+    padding: 33px;
+    overflow-y: auto;
+    margin-bottom: 23px;
+}
+
+.message{
+    font-size: 20px;
+    color: white;
+    background-color: black;
+    width: 24%;
+    padding: 10px;
+    margin: 17px 12px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.left{
+    float: left;
+    clear:both;
+}
+
+.right{
+    float: right;
+    clear:both;
+}
+#send-container{
+    display:block;
+    margin: auto;
+    text-align: center;
+    max-width: 1085px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#messageInp{
+    background-color:lightgray;
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+    font-size: 18px;
+}
+
+.btn{
+    background-color:lightgray;
+    margin: 0 5px;
+    width: 9%;
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+} 

@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+
+height: 90px;
+
+/* width: 260px; */
+
+display: flex;
+
+justify-content: space-around;
+
+align-items: center;
+
+background-color: #2d3438;
+
+display: flex;
+}
+.tickets-filter{
+
+height: 80%;
+
+width: 40%;
+
+background: #b2bec3;
+}
+.filter{
+
+}
+.red{
+
+}
+.blue{
+
+}
+.green{
+
+}
+.black{
+
+}
+.yellow{
+
+}
+.ticket-action{
+    
+}
+
+.ticket-action div{
+
+}
+.ticket-action i{
+
+}
+.ticket-container{
+
+}
