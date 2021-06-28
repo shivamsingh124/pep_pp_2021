@@ -131,7 +131,7 @@ zoomOut.addEventListener("click", function () {
   if (currentZoom - 0.1 < minZoom) {
     return;
   }
-  currentZoom = currentZoom - 0.1;
+  
   videoElement.style.transform = `scale(${currentZoom})`;
   check;
 });
