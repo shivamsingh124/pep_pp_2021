@@ -1,8 +1,13 @@
 const puppeteer = require("puppeteer");
 let usernames = require("./donor");
 let usernamesneed = require("./need");
+<<<<<<< HEAD
 const id = "@ShivamSinghMah7";
 const pw = "trijal123";
+=======
+const id = "@Shivam26694085";
+const pw = "pepcoding";
+>>>>>>> 21e753fa19b6667c17a13bc6c9d4561d15c32009
 let message = [];
 let tweet = [];
 for (let i=0;i<usernames.length/4;i++){
