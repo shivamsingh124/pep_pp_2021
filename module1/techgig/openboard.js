@@ -20,7 +20,7 @@ async function login(){
     await tab.waitForSelector('#modeSelect' , {visible:true});
     await tab.click("#modeSelect");
     // await tab.waitForTimeout(40000);
-    // await tab.mouse.click(782 , 263, {button: 'left'})
+    // await tab.mouse.click(782 , 361, {button: 'left'})
     // await tab.waitForTimeout(50000);
 
     // await tab.waitForSelector('div[style="top:57px;height:19px;"]' , {visible:true});
@@ -32,6 +32,7 @@ async function login(){
     await tab.click('div[style="top:0px;height:19px;"]');
     // await tab.waitForSelector('option[value="python3"]' , {visible:true});
     // await tab.click('option[value="python3"]');
+    await tab.waitForTimeout(500);
     await tab.keyboard.down("Control");
     await tab.keyboard.down("A");
     await tab.keyboard.down("V");
