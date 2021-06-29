@@ -5,6 +5,11 @@ let filters = document.querySelectorAll(".filter");
 let filterSelected = "none";
 let zoomIn = document.querySelector(".zoomIn");
 let zoomOut = document.querySelector(".zoomOut");
+let galleryBtn = document.querySelector(".gallery-btn");
+
+galleryBtn.addEventListener("click" , function(){
+  window.location.assign("gallery.html");
+})
 
 let minZoom = 1;
 let maxZoom = 3.1;
@@ -34,15 +39,14 @@ let mediaRecorder;
     // aTag.download = `Video${Date.now()}.mp4`;
     // aTag.href = videoURL;
     // aTag.click();
-    //add video object to db
-    addMedia(videoObject,"video");
+
+    // add video object to db
+    addMedia(videoObject , "video");
   };
   mediaRecorder.onstop = function () {
     console.log("Inside on stop");
   };
-
   recordButton.addEventListener("click", recordMediaFun);
-
   capturePhoto.addEventListener("click", capturePhotoFun);
 })();
 
@@ -106,10 +110,10 @@ function capturePhotoFun() {
 
   let ctx = canvas.getContext("2d");
 
-  if(currentZoom != 1){
-    ctx.translate(canvas.width/2 , canvas.height/2);
-    ctx.scale(currentZoom , currentZoom);
-    ctx.translate(-canvas.width/2 , -canvas.height/2);
+  if (currentZoom != 1) {
+    ctx.translate(canvas.width / 2, canvas.height / 2);
+    ctx.scale(currentZoom, currentZoom);
+    ctx.translate(-canvas.width / 2, -canvas.height / 2);
   }
 
   ctx.drawImage(videoElement, 0, 0);
@@ -125,12 +129,12 @@ function capturePhotoFun() {
   // aTag.href = canvas.toDataURL("image/jpg");
   // aTag.click();
 
-
-  //save image to DB
-  let canvasURL=canvas.toDataURL("image/jpg");
-  addMedia(canvasURL,"photo");
+  // save image to DB
+  let canvasURL = canvas.toDataURL("image.jpg");
+  addMedia(canvasURL, "photo");
 }
-function  recordMediaFun() {
+
+function recordMediaFun() {
   if (recordingState) {
     // already recording is going on
     // stop the recording
@@ -144,8 +148,9 @@ function  recordMediaFun() {
     recordButton.classList.add("animate-record");
   }
 }
-function addMedia(mediaURL,mediaType){
-  // add media to db
+
+function addMedia(mediaURL, mediaType) {
+  //   db me media add hojaega
   let txnObject = db.transaction("Media", "readwrite"); // start transaction on mediaTable
   let mediaTable = txnObject.objectStore("Media"); // this will get access to mediaTable
 
@@ -155,5 +160,4 @@ function addMedia(mediaURL,mediaType){
     console.log("txn failed");
     console.log(e);
   };
-
 }
