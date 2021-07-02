@@ -1,13 +1,8 @@
 const puppeteer = require("puppeteer");
 let usernames = require("./donor");
 let usernamesneed = require("./need");
-<<<<<<< HEAD
 const id = "@ShivamSinghMah7";
 const pw = "trijal123";
-=======
-const id = "@Shivam26694085";
-const pw = "pepcoding";
->>>>>>> 21e753fa19b6667c17a13bc6c9d4561d15c32009
 let message = [];
 let tweet = [];
 for (let i=0;i<usernames.length/4;i++){
@@ -32,21 +27,20 @@ let tab;
     await waitandclick(".css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0 .css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0", { visible: true })    
     await tab.type('.css-901oao.r-1awozwy.r-1fmj7o5.r-6koalj.r-1qd0xha.r-1inkyih.r-16dba41.r-135wba7.r-bcqeeo.r-13qz1uu.r-qvutc0 input[name="session[username_or_email]"]', id);
     await tab.type('.css-901oao.r-1awozwy.r-1fmj7o5.r-6koalj.r-1qd0xha.r-1inkyih.r-16dba41.r-135wba7.r-bcqeeo.r-13qz1uu.r-qvutc0 input[name="session[password]"]', pw);
-    await tab.click('.css-901oao.r-1awozwy.r-jwli3a.r-6koalj.r-18u37iz.r-16y2uox.r-1qd0xha.r-a023e6.r-b88u0q.r-1777fci.r-rjixqe.r-dnmrzs.r-bcqeeo.r-q4m81j.r-qvutc0', { visible: true })    
+    await tab.click('div[role="button"]', { visible: true })    
     }
     catch{
         console.log("error")
     }   
 
-    await waitandclick('a[href="/compose/tweet"] .css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0', { visible: true })
-    await tab.waitForTimeout(2000)
-    await tab.type('.public-DraftStyleDefault-block.public-DraftStyleDefault-ltr', "NOTE : These people are willing to donate covid equipment: " + tweet) 
-    await tab.waitForTimeout(15000)
-    await waitandclick('div[data-testid="tweetButton"]', { visible: true }) 
-    await waitandclick('div[data-testid="tweetButton"]', { visible: true }) 
+    // await waitandclick('a[href="/compose/tweet"] .css-901oao.css-16my406.r-poiln3.r-bcqeeo.r-qvutc0', { visible: true })
+    // await tab.waitForTimeout(2000)
+    // await tab.type('.public-DraftStyleDefault-block.public-DraftStyleDefault-ltr', "Note : These people are willing to donate covid equipment: " + tweet) 
+    // await tab.waitForTimeout(15000)
+    // await waitandclick('div[data-testid="tweetButton"]', { visible: true }) 
+    // await waitandclick('div[data-testid="tweetButton"]', { visible: true }) 
     await tab.waitForTimeout(3000)
-    for (let i = 0; i < usernamesneed.length; i++) {
-                                                                                                // backspace 
+    for (let i = 0; i < usernamesneed.length; i++) {                                                                                       // backspace 
         try{
         await tab.waitForTimeout(2000) 
         await search(usernamesneed[i].user_id)
@@ -54,6 +48,13 @@ let tab;
         }
         catch{
         await console.log(" message not delivered to "+usernamesneed[i].user_id);
+        // await tab.keyboard.press("ctrl")
+        // await tab.keyboard.press("a")
+        // await tab.keyboard.press("End")
+        await tab.keyboard.down('Control');
+        await tab.keyboard.press('A');
+        await tab.keyboard.up('Control');
+        await tab.keyboard.press('Backspace');
         }
     }
     await console.log("ALL MESSAGE DONE  ")
@@ -79,7 +80,7 @@ async function search(uid) {
         try {
             await tab.type(".r-30o5oe.r-1niwhzg.r-17gur6a.r-1yadl64.r-deolkf.r-homxoj.r-poiln3.r-7cikom.r-1ny4l3l.r-xyw6el.r-641cr4.r-1dz5y72.r-fdjqy7.r-13qz1uu", uid);     //search
             await tab.waitForTimeout(2000)
-            await tab.click('li[role="listitem"]');                  // list click
+            await tab.click('.css-18t94o4.css-1dbjc4n.r-1ny4l3l.r-ymttw5.r-1f1sjgu.r-o7ynqc.r-6416eg');                  // list click
             await tab.waitForTimeout(2000)
             await waitandclick('div[aria-label="Message"]', { visible: true })     
             await tab.waitForTimeout(2000)               //message
@@ -98,4 +99,3 @@ async function search(uid) {
 
     })
 }
-
