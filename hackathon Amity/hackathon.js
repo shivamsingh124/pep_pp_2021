@@ -8,7 +8,7 @@ let tweet = [];
 // for (let i=0;i<usernames.length/4;i++){
 //     message.push(usernames[i].user_id)
 // }
-message ="";
+message ="https://60df10a4c5f3c1dcbcb16a8a--covicure-chat-application.netlify.app";
 for (let i=0;i<usernames.length/7-3;i++){
     tweet.push(usernamesneed[i].user_id)
 }

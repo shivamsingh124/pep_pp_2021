@@ -1,4 +1,6 @@
 Name of the Team : Galactus
+Working video:
+Power Point Presentation : https://docs.google.com/presentation/d/1d3MucTDWLTPeOp9L25mnyVE_nBvDekIjZvipGuIv4ek/edit?usp=sharing
 Number of Member : 2
 College : maharaja agrasen institute of technology
 Theme of the Project : HealthCare
@@ -33,6 +35,8 @@ Step to run on local machine :
                     Run webdatascrappingneed.js     file it will collect and store data in need.json 
                     Run hackathon.js                file it will automate twitter and tweet from personal account and    message                             donor and needy people with a link of our chat Application.
             Step 5:  Run htmlchange.js              file it will display donor and needy people iD's and will display Status of tweet.
-            Step 6 : Through this link join our chat Application Where there is a community to help you and ask for Equipment you need
+            Step 6 : Through this link join our chat Application Where there is a community to help you and ask for Equipment you need(https://60df10a4c5f3c1dcbcb16a8a--covicure-chat-application.netlify.app/)
+            Step 7: Open CoviCure ChatAPP folder and run npm i && npm start for both client and server side to start the development server
+        
 
 
